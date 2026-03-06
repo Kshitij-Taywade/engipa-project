@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2>Available Papers</h2>
+
+    <div id="papers"></div>
+
+    <script>
+      async function loadPapers() {
+        const res = await fetch("http://localhost:5000/api/papers");
+
+        const papers = await res.json();
+
+        const div = document.getElementById("papers");
+
+        papers.forEach((p) => {
+          div.innerHTML += `
+<p>
+${p.subject} - ${p.branch} - ${p.year}
+<a href="http://localhost:5000/uploads/${p.file}" download>Download</a>
+</p>
+`;
+        });
+      }
+
+      loadPapers();
+    </script>
+  </body>
+</html>
