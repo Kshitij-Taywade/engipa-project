@@ -10,7 +10,7 @@ if (registerForm) {
         const password = document.getElementById("password").value;
         const role = document.getElementById("role").value;
 
-        await fetch("http://engipa-project-production.up.railway.app/api/register", {
+        await fetch("https://engipa-project-production.up.railway.app/api/register", {
 
             method: "POST",
             headers: {
@@ -38,7 +38,7 @@ if (loginForm) {
         const username = document.getElementById("loginUsername").value;
         const password = document.getElementById("loginPassword").value;
 
-        const res = await fetch("http://engipa-project-production.up.railway.app/api/login", {
+        const res = await fetch("https://engipa-project-production.up.railway.app/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

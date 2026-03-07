@@ -6,7 +6,7 @@ form.addEventListener("submit", async(e) => {
 
     const formData = new FormData(form);
 
-    await fetch("http://engipa-project-production.up.railway.app/api/upload", {
+    await fetch("https://engipa-project-production.up.railway.app/api/upload", {
 
         method: "POST",
         body: formData
