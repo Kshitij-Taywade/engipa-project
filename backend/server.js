@@ -1,3 +1,5 @@
+console.log("SERVER FILE STARTED");
+
 const express = require("express");
 const cors = require("cors");
 
